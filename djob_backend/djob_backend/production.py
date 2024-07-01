@@ -35,6 +35,7 @@ STORAGES = {
     }
 }
 
+ALLOWED_HOSTS = ['job-app-backend.azurewebsites.net']
 CORS_ALLOWED_ORIGINS = [
    'job-app-backend.azurewebsites.net'
 ]

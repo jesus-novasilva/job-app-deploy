@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'job',
 ]
 
-
+ALLOWED_HOSTS = ['job-app-backend.azurewebsites.net']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'job-app-backend.azurewebsites.net'
