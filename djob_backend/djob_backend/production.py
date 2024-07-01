@@ -35,9 +35,9 @@ STORAGES = {
     }
 }
 
-# CORS_ALLOWED_ORIGINS = [
-   
-# ]
+CORS_ALLOWED_ORIGINS = [
+   'job-app-backend.azurewebsites.net'
+]
 
 
 # Configure Postgres database based on connection string of the libpq Keyword/Value form
