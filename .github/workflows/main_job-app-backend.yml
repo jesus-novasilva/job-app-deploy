@@ -35,7 +35,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Collect statil files
-      run: |
+        run: |
           cd djob_backend
           python manage.py collectstatic --noinput
         
