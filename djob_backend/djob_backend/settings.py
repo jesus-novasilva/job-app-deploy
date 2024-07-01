@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'job-app-backend.azurewebsites.net'
 ]
 
 MIDDLEWARE = [
