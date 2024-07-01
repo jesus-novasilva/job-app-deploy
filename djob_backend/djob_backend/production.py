@@ -24,8 +24,16 @@ MIDDLEWARE = [
 ]
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"
+    }
+}
 
 # CORS_ALLOWED_ORIGINS = [
    
@@ -45,6 +53,8 @@ DATABASES = {
         'PASSWORD': conn_str_params['password'],
     }
 }
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CACHES = {
         "default": {  
